@@ -1,0 +1,41 @@
+﻿@model IEnumerable<Drink>
+@{
+    ViewData["Title"] = "Menu";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@{
+    var listofDrink = new List<Drink>();
+
+    foreach (var p in Model)
+    {
+        listofDrink.Add(p);
+    }
+
+    Drink[] Menu = listofDrink.ToArray();
+    Array.Sort(Menu, delegate (Drink drink1, Drink drink2)
+    {
+        return drink1.DrinkType.CompareTo(drink2.DrinkType);
+    });
+}
+
+@if (ViewBag.drink != null)
+{
+    foreach (var p in Menu)
+    {
+        if (p.DrinkType == "Beer")
+        {
+            <h2>@p.DrinkName</h2>
+            <h2>@p.Price</h2>
+        }
+    }
+}
+else
+{
+    foreach (var p in Menu)
+    {
+        <h2>@p.DrinkName</h2>
+        <h2>@p.Price</h2>
+    }
+}
+

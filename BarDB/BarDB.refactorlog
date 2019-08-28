@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Operations Version="1.0" xmlns="http://schemas.microsoft.com/sqlserver/dac/Serialization/2012/02">
+  <Operation Name="Rename Refactor" Key="93cb3955-dfdb-48a9-8b76-9e35d828941e" ChangeDateTime="08/28/2019 01:58:33">
+    <Property Name="ElementName" Value="[dbo].[Drink].[Id]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Drink]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="DrinkID" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="9c2b1ab1-a607-4a0e-a30d-99efeaa6e26a" ChangeDateTime="08/28/2019 01:58:38">
+    <Property Name="ElementName" Value="[dbo].[Order].[Id]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Order]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="OrderID" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="ee5944f6-ba1e-48a6-96b8-c3309ca0daef" ChangeDateTime="08/28/2019 01:58:43">
+    <Property Name="ElementName" Value="[dbo].[Order].[D]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Order]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="DrinkId" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="061d827b-2d97-421d-bea2-313f1a39b3ec" ChangeDateTime="08/28/2019 01:58:46">
+    <Property Name="ElementName" Value="[dbo].[Order].[DrinkId]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Order]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="DrinkID" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="8107313e-d6fd-4b7a-bfb1-2cf033349e84" ChangeDateTime="08/28/2019 04:12:00">
+    <Property Name="ElementName" Value="[dbo].[Order].[DrinkID]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Order]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="DrinkName" />
+  </Operation>
+</Operations>

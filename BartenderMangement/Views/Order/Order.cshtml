@@ -1,0 +1,24 @@
+﻿@model IEnumerable<Order>
+@{
+    ViewData["Title"] = "Menu";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@{
+    var listofOrder = new List<Order>();
+
+    foreach (var p in Model)
+    {
+        listofOrder.Add(p);
+    }
+
+    Order[] Order_Work = listofOrder.ToArray();
+}
+
+@foreach (var p in Order_Work)
+{
+    if (p.FinishCheck == "Not")
+    {
+        @p.DrinkName
+    }
+}
