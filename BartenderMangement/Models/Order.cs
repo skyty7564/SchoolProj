@@ -10,7 +10,7 @@ namespace BartenderMangement.Models
         public int OrderID { get; set; }
         public string DrinkName { get; set; }
 
-        public TimeSpan Time {get; set;}
+      
         
         public string DrinkModification { get; set; }
 
