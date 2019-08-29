@@ -3,7 +3,22 @@
     ViewData["Title"] = "Menu";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
+    <style>
 
+        table, th, td {
+            border: 1px solid black;
+
+        }
+
+        #box {
+          box-sizing: content-box;  
+          width: 200px;
+          height: 50px;
+          padding: 15px;  
+          border: 10px solid black;
+        
+        }
+    </style>
 @{
     var listofDrink = new List<Drink>();
 
@@ -25,8 +40,11 @@
     {
         if (p.DrinkType == "Beer")
         {
-            <h2>@p.DrinkName</h2>
-            <h2>@p.Price</h2>
+                <div id="box">
+
+                    @p.DrinkName: @p.Price
+
+                </div>  
         }
     }
 }
@@ -34,8 +52,16 @@ else
 {
     foreach (var p in Menu)
     {
-        <h2>@p.DrinkName</h2>
-        <h2>@p.Price</h2>
+        <div id="box">
+            <h2>
+                <a asp-action="Index"
+                   asp-controller="Order"
+                   asp-route-name="@p.DrinkName">@p.DrinkName : @p.Price</a>
+            </h2>
+        </div>
+        @*<a asp-action="Test"
+              asp-route-name="@p.DrinkName">
+            @p.DrinkName</a>*@
     }
 }
 

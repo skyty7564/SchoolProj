@@ -7,10 +7,12 @@ namespace BartenderMangement.Models
 {
     public class Order
     {
+
+
         public int OrderID { get; set; }
         public string DrinkName { get; set; }
 
-        public TimeSpan Time {get; set;}
+        public DateTime Time {get; set;}
         
         public string DrinkModification { get; set; }
 

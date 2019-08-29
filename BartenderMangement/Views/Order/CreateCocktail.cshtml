@@ -1,0 +1,27 @@
+﻿
+@{
+    ViewData["Title"] = "CreateCocktail";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<body>
+    @if (TempData["message"] != null)
+    {<div class="alert alert-success">@TempData["message"]</div>}
+
+</body>
+
+<form asp-action="CreateCocktail" method="post">
+
+    <label> @ViewBag.name</label>
+    <input readonly class="form-control" @ViewBag.name />
+
+
+
+
+
+    <div class="text-center">
+        <button class="btn btn-primary" type="submit">Save</button>
+        <a asp-action="Menu" asp-controller="Bar" class="btn btn-default">Cancel</a>
+    </div>
+
+</form>

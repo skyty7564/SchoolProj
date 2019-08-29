@@ -3,7 +3,12 @@
     ViewData["Title"] = "Menu";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
+    <style>
 
+        table, th, td {
+            border: 1px solid black;
+        }
+    </style>
 @{
     var listofOrder = new List<Order>();
 
@@ -13,12 +18,21 @@
     }
 
     Order[] Order_Work = listofOrder.ToArray();
-}
-
-@foreach (var p in Order_Work)
-{
-    if (p.FinishCheck == "Not")
+  Array.Sort(Order_Work, delegate (Order OR1, Order OR2)
     {
-        @p.DrinkName
-    }
+        return OR1.Time.CompareTo(OR2.Time);
+    });
 }
+    <table style="width:100%">
+        @foreach (var p in Order_Work)
+        {
+            if (p.FinishCheck == "Not")
+            {
+                <tr> <td>@p.DrinkName<br />@p.Time </td></tr> 
+
+            }
+        }
+
+
+    </table>
+

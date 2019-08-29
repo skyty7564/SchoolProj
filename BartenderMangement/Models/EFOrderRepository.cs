@@ -17,5 +17,20 @@ namespace BartenderMangement.Models
         public IEnumerable<Order> Order => context.Order;
 
 
+        public void SaveOrder(Order order)
+        {
+           
+            if (order.OrderID != 0)
+            {
+                Order dbEntry = context.Order.FirstOrDefault(p => p.OrderID == order.OrderID);
+                context.Order.Add(order);
+
+
+            }
+            context.SaveChanges();
+        }
+       
+
+
     }
 }

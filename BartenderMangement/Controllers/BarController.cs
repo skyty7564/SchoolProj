@@ -19,7 +19,7 @@ namespace BartenderMangement.Controllers
         [HttpGet]
         public ViewResult Index()
         {
-            ViewBag.drink = null;
+        
             return View();
         }
         [HttpGet]
@@ -28,5 +28,13 @@ namespace BartenderMangement.Controllers
             return View(repository.Drink);
         }
 
+
+        
+   
+        public ViewResult Test(string name)
+        {
+       
+            return View();
+        }
     }
 }
